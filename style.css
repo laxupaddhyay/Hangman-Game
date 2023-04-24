@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+  }
+  
+  .container {
+    font-size: 16px;
+    background-color: #ffffff;
+    width: 90vw;
+    max-width: 34em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+  }
+  
+  #options-container {
+    text-align: center;
+  }
+  
+  #options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+  }
+  
+  #options-container button {
+    padding: 0.6em 1.2em;
+    border: none;
+    background: linear-gradient(to bottom, #f9d423, #ff4e50);
+    color: #fff;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #options-container button:hover,
+  #options-container button:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
+  }
+  
+  #options-container button:disabled {
+    background-color: #efefef;
+    color: #808080;
+    cursor: not-allowed;
+  }
+  
+  #options-container button.active {
+    background-color: #fff;
+    color: #000000;
+  }
+  
+  .letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+  }
+  
+  #letter-container button {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background: linear-gradient(to bottom, #f9d423, #ff4e50);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #letter-container button:hover,
+  #letter-container button:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
+  }
+  
+  .new-game-popup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+  }
+  
+  #user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 0 1.2em 0;
+  }
+  
+  canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid #000000;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  #result-text h2 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  
+  #result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  background-color: #f4c531;
+  border: 3px solid #000000;
+  color: #000000;
+  border-radius: 0.2em;
+}
+.win-msg {
+  color: #39d78d;
+}
+.lose-msg {
+  color: #fe5152;
+}
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+      padding: 1em;
+      border-radius: 0;
+    }
+    #options-container div {
+      flex-wrap: wrap;
+    }
+    #options-container button {
+      padding: 0.5em 1em;
+      font-size: 0.8em;
+      margin: 0.5em;
+    }
+    #user-input-section {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    .container {
+      max-width: 80%;
+      padding: 2em;
+      border-radius: 0.4em;
+    }
+    #options-container div {
+      flex-wrap: wrap;
+    }
+    #options-container button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      margin: 0.5em;
+    }
+    #user-input-section {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 900px) {
+    .container {
+      max-width: 50%;
+      padding: 3em;
+      border-radius: 0.6em;
+    }
+    #options-container div {
+      flex-wrap: nowrap;
+    }
+    #options-container button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      margin: 0;
+    }
+    #user-input-section {
+      font-size: 1.8em;
+    }
+  }
+  
